@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="link" href="#">
+        <span data-content="chamomile">chamomile</span>
+    </a>
+    <style>
+        .link {
+            position: relative;
+            -webkit-transition: -webkit-clip-path 275ms ease;
+            transition: -webkit-clip-path 275ms ease;
+            transition: clip-path 275ms ease;
+            transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+        }
+        .link:hover span::before, .link:focus span::before {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .link span {
+            position: relative;
+            display: inline-block;
+            color: #2c2fe8;
+        }
+        .link span::before {
+            position: absolute;
+            content: attr(data-content);
+            color: #1619cb;
+            text-decoration: underline;
+            -webkit-text-decoration-color: #1619cb;
+                    text-decoration-color: #1619cb;
+            -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+                    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+            -webkit-transition: -webkit-clip-path 275ms ease;
+            transition: -webkit-clip-path 275ms ease;
+            transition: clip-path 275ms ease;
+            transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+        }
+    </style>
+</body>
+</html>
