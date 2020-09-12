@@ -1,0 +1,9 @@
+#particles-js {
+    width: 100%;
+    height: 70%;
+    background-color: #0f0136;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
